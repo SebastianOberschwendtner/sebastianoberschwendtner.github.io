@@ -1,0 +1,7 @@
+baseURL = 'https://sebastianoberschwendtner.github.io'
+languageCode = 'en-us'
+title = 'Hi! I am Sebastian.'
+theme = "ananke"
+
+# Enable emojis
+enableEmoji = true
