@@ -1,7 +1,26 @@
 baseURL = 'https://sebastianoberschwendtner.github.io'
 languageCode = 'en-us'
-title = 'Hi! I am Sebastian.'
+title = 'Sebastian Oberschwendtner'
 theme = "ananke"
+SectionPagesMenu = "main"
 
 # Enable emojis
 enableEmoji = true
+
+# Configure the site 
+[params]
+    site_logo = "logo.png"
+    text_color = ""
+    author = "Sebastian Oberschwendtner"
+    favicon = ""
+    description = "Personal website of Sebastian Oberschwendtner and portfolio of projects."
+    cover_dimming_class =  "bg-black-30"
+    # recent_posts_number = 3
+
+[[params.ananke_socials]]
+    name = "github"
+    url = "https://www.github.com/SebastianOberschwendtner"
+    
+# Allow inline html
+[markup.goldmark.renderer]
+  unsafe = true # Allow HTML in md files
