@@ -2,7 +2,7 @@
 title: "Hi! I am Sebastian."
 date: 2022-05-18T17:21:42+02:00
 draft: false
-featured_image: /img/banner.jpg
+featured_image: img/banner.jpg
 omit_header_text: False
 keywords: ""
 ---
