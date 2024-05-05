@@ -9,7 +9,7 @@ enableEmoji = true
 
 # Configure the site 
 [params]
-    site_logo = "logo.png"
+    site_logo = "img/logo.png"
     text_color = ""
     author = "Sebastian Oberschwendtner"
     favicon = ""
