@@ -11,6 +11,6 @@ keywords: ""
 ---
 Welcome to my personal site where you can find out about me and all my projects.
 
-&rdca; Find out [about me](about)
+&rarr; Find out [about me](about)
 
-&rdca; Or my [projects](projects)
+&rarr; Or my [projects](projects)
