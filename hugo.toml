@@ -1,3 +1,4 @@
+# Site settings
 baseURL = 'https://sebastianoberschwendtner.github.io'
 languageCode = 'en-us'
 title = 'Sebastian Oberschwendtner'
@@ -21,6 +22,5 @@ enableEmoji = true
     name = "github"
     url = "https://www.github.com/SebastianOberschwendtner"
     
-# Allow inline html
 [markup.goldmark.renderer]
   unsafe = true # Allow HTML in md files

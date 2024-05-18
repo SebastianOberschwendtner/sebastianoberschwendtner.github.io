@@ -4,7 +4,7 @@ draft: false
 summary: A weighing scale with built-in timer for brewing perfect espresso.
 featured_image: img/oscale_banner.jpg
 omit_header_text: true
-keywords: "weighing scale, espresso, timer, AVR, Atmel"
+keywords: "weighing scale, espresso, timer, avr, atmel, atmega,"
 ---
 
 ![oScale Logo Header](img/oscale_header.png)
@@ -16,8 +16,8 @@ keywords: "weighing scale, espresso, timer, AVR, Atmel"
 <table class="left w-100">
     <tr>
         <td class="pr0 tl"><i class="da fa-microchip"></i></td>
-        <td><b>Processor:</b></td>
-        <td class="tr">Atmel Atmega 328p</td>
+        <td><b>Controller:</b></td>
+        <td class="tr">Atmel ATmega328P</td>
     </tr>
     <tr>
         <td class="pr0 tl"><i class="da fa-map-o"></i></td>
@@ -73,7 +73,13 @@ keywords: "weighing scale, espresso, timer, AVR, Atmel"
 >The **schematic** and **PCB** are designed with *CircuitMaker*. The project can be found [here <i class="fa fa-external-link"></i>](https://circuitmaker.com/Projects/Details/SebastianOberschwendtner/OTP-22oScale).
 
 ## Description
-{{< figure src="img/oscale.jpg" class="fl mt1 ml0" width=300 >}}
+{{< figure src="img/oscale.jpg" class="fl mt1 ml0 mb0" width=300 >}}
 
-The *oScale* is a weighing scale with an integrated kitchen timer meant for brewing espresso.
-It uses a strain gauge based load cell to measure the weight.
+The *oScale* is a weighing scale with an integrated kitchen timer.
+It is intended for brewing espresso, where the weight of the coffee grounds and the brewing time are crucial for a perfect espresso.
+The weight is measured by a sensitive load cell with a maximum capacity of *500 g*.
+The voltage of the load cell is amplified by an analog circuit before it is digitized by an external ADC with a resolution of *12 bit*.
+The digitized signal is then filtered and processed by the ATmega328P microcontroller.
+The large LCD display shows the weight in *0.1 g* increments and the current brew time.
+The timer has to be started manually by pressing a button.
+The case and weighing platform are designed to fit underneath an espresso machine, which has a limited distance between the drip tray and the portafilter.

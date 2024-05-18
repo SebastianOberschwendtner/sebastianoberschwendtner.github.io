@@ -1,10 +1,10 @@
 ---
 title: "oBank"
 draft: false
-summary: "An open source power bank with power delivery capabilities."
+summary: "An open source power bank with USB-C power delivery capabilities."
 featured_image: img/obank_banner.jpg
 omit_header_text: true
-keywords: "Open source power bank, power delivery, usb-c, STM32, OTOS"
+keywords: "open source, power bank, power delivery, usb-c, stm32, otos,"
 ---
 
 ![Logo Header](img/obank_header.png)
@@ -16,8 +16,8 @@ keywords: "Open source power bank, power delivery, usb-c, STM32, OTOS"
 <table class="left w-100">
     <tr>
         <td class="pr0 tl"><i class="da fa-microchip"></i></td>
-        <td><b>Processor:</b></td>
-        <td class="tr">STM32L073</td>
+        <td><b>Controller:</b></td>
+        <td class="tr">STM32L072</td>
     </tr>
     <tr>
         <td class="pr0 tl"><i class="da fa-map-o"></i></td>
@@ -73,7 +73,15 @@ keywords: "Open source power bank, power delivery, usb-c, STM32, OTOS"
 >The **schematic** and **PCB** are designed with *CircuitMaker*. The project can be found [here <i class="fa fa-external-link"></i>](https://circuitmaker.com/Projects/Details/SebastianOberschwendtner/OTP-20oBank).
 
 ## Description
-{{< figure src="img/obank.jpg" class="fl mt1 ml0" width=300 >}}
+{{< figure src="img/obank.jpg" class="fl mt1 ml0 mb0" width=300 >}}
 
-Open Source Power Bank with Power Delivery Capability.
-More information can be found in the *beautiful* [Wiki <i class="fa fa-external-link"></i>](https://github.com/SebastianOberschwendtner/OTP20_oBank/wiki/home).
+This is an open source power bank with USB-C power delivery capabilities.
+The power bank is controlled by an STM32L072 microcontroller and features a USB-C port for charging and discharging.
+The power bank can be charged with up to 18W and can deliver up to 36W to the connected device.
+When connected via the USB-C port, the power bank is compliant with the USB-C power delivery 3.2 standard and automatically negotiates the power delivery profile with the connected device.
+In addition, there are two USB-A ports which can deliver up to 2.4A each.
+A 3.7V 4000mAh LiPo battery supplies the power bank.
+The battery is monitored by a dedicated battery management IC.
+A high-contrast OLED display shows the current operating conditions of the power bank and its overall health. 
+When the power bank is not in use, it automatically turns off to save power.
+The standby current is very low, so that the self-discharge of the battery is negligible during normal everyday use.

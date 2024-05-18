@@ -3,8 +3,8 @@ title: "OTOS"
 draft: false
 featured_image: img/otos_banner.jpg
 omit_header_text: true
-summary: "OTOS is a real time operating system."
-keywords: "Real Time operating system, AVR, Atmel, STM32, ST"
+summary: "OTOS is a real time operating system for embedded systems."
+keywords: "otos, real-time, operating system, avr, atmel, stm32,"
 weight: 1
 ---
 
@@ -18,7 +18,7 @@ weight: 1
     <tr>
         <td class="pr0 tl"><i class="da fa-microchip"></i></td>
         <td><b>Processor:</b></td>
-        <td class="tr">AVR, STM32</td>
+        <td class="tr">ARM Cortex M0+, M4</td>
     </tr>
     <tr>
         <td class="pr0 tl"><i class="da fa-map-o"></i></td>
@@ -71,8 +71,27 @@ weight: 1
 
 <div class="overflow-auto">
 
-{{< figure src="img/otos_switch.png" class="fl mt0 ml0" width=300 >}}
+{{< figure src="img/otos_switch.png" class="fl mt0 ml0 mb0" width=300 >}}
 
-Bear bones realtime operating system for embedded systems. Focus lies on KISS (**K**eep-**I**t-**S**uper-**S**imple).
+OTOS is a real-time operating system for embedded systems written in C++.
+It uses a round-robin scheduling system with priority to manage the thread execution.
+The scheduling is not preemptive (yet), so each thread has to ensure to yield its execution to allow other threads to run.
+The operating system differentiates between the *thread* and the *kernel* level.
+The *thread* level is the user space, where the user can create and manage threads.
+The *kernel* level is the system space, where the operating system manages the thread execution.
+The kernel handles the context switching when one thread yields its execution and another thread is scheduled to run.
+You can see the basic principle how the context switching works in the figure on the left
+Each thread gets assigned a fixed sized stack, where the thread stores its context.
+In future releases, the kernel will also check the stack usage of each thread to prevent stack overflow.
+The operating system features a inter process communication (IPC) system.
+Each thread gets assigned a unique ID.
+The ID is used to access the tag-based data from other threads.
 
+The operating system currently supports the ARM Cortex M0+ and M4 processors.
+The support of Atmel AVR devices is planned for future releases.
+
+In addition to the thread management, the operating system comes with a set of drivers for the most common peripherals like UART, SPI, I2C, and GPIO.
+The drivers are meant to provide an uniform interface to user, regardless of which microcontroller is used (Currently, the drivers for *STM32L0* and *STM32F4* devices are available).
+The operating system provides additional drivers for several external devices and controllers, like battery management ICs or LCD drivers.
+A simple graphics library is included as well.
 </div>
